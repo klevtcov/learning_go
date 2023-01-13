@@ -1,10 +1,10 @@
-## Материалы и курсы по изучению языка GO
+# Материалы и курсы по изучению языка GO
 
 
 <img src="https://go.dev/images/gophers/motorcycle.svg"  width=25% />
 
 
-# GetGoing
+### GetGoing
 * https://www.udemy.com/course/getgoing
 * Golang
 * Backend development
