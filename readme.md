@@ -13,3 +13,11 @@
 * Programming language
 * Go
 * Gopher
+
+
+### References
+- https://golang.org/
+- https://gobyexample.com/
+- https://godoc.org/
+- https://riptutorial.com/go/example/6056/ping-pong-with-two-goroutines
+- https://heroku.com/
