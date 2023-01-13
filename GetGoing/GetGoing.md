@@ -35,7 +35,8 @@ This course will give you an understanding of how the Go language works. The fol
 ### Course structure
 The course file structure
 
-* getgoing
+```
+getgoing
 ├── 00-about-me
 ├── 01-intro
 ├── 02-section1
@@ -92,3 +93,4 @@ The course file structure
 │   ├── 06-summary
 │   └── 07-outro
 └── 07- outro
+```
