@@ -1,7 +1,7 @@
 ## Материалы и курсы по изучению языка GO
 
 
-<img src="https://go.dev/images/gophers/motorcycle.svg">
+<img src="https://go.dev/images/gophers/motorcycle.svg"  width=25% />
 
 
 # GetGoing
