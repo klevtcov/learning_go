@@ -9,13 +9,38 @@ import (
 // https://metanit.com/go/tutorial/4.2.php
 
 type Car struct {
+	Name    string
+	Age     int
+	ModelNo int
+}
+
+func (c Car) Print() {
+	fmt.Println(c)
+}
+
+func (c Car) Drive() {
+	fmt.Println("Driving...")
+}
+
+func (c Car) GetName() string {
+	return c.Name
 }
 
 func main() {
-	c := Car{}
-	var c1 Car
+	// c := Car{"chevy", 1, 2} - {chevy 1 2}
+	c := Car{
+		Name:    "chevy",
+		Age:     1,
+		ModelNo: 2,
+	}
 
-	fmt.Println()
+	c.Print()
+	c.Drive()
+	fmt.Println(c.GetName())
+
+	// var c1 Car
+
+	// fmt.Println(c)
 
 }
 
