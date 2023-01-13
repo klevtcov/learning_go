@@ -31,6 +31,14 @@ Pointers
 
 // abstract data types
 map[]<datatype>
-struct{}
-interface{}
+struct{} - main2
+interface{} - main3-4
 
+* Интерфейсы main3-4
+https://metanit.com/go/tutorial/6.1.php
+Интерфейсы представляют абстракцию поведения других типов. Интерфейсы позволяют определять функции, которые не привязаны к конкретной реализации. То есть интерфейсы определяют некоторый функционал, но не реализуют его.
+
+* control - main5
+if-else
+for
+switch
