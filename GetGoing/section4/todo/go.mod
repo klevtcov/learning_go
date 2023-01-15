@@ -1,3 +1,3 @@
-module github.com/klevtcov/todoist
+module github.com/klevtcov
 
 go 1.19
