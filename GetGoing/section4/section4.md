@@ -20,3 +20,6 @@
 API, HTTP methods - main
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
+curl -i localhost:3000/ping
+просмотр выдачи ответа в консоли
+
