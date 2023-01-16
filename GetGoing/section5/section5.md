@@ -1,5 +1,3 @@
-
-
 Vendoring - устарело
 https://github.com/kardianos/govendor
 
@@ -8,9 +6,6 @@ https://go.dev/blog/migrating-to-go-modules
 
 go mod init - создать проект
 go mod tidy -  finds all the packages transitively imported by packages in your module.
-
-
-
 
 ```
 ├── 06-section5
