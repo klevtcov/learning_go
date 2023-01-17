@@ -15,6 +15,14 @@
 * Gopher
 
 
+## Stepik_54403 – Программирование на Golang
+* https://stepik.org/course/54403/info
+* Циклы
+* Срезы
+* Горутины
+* JSON
+
+
 ### References
 - https://golang.org/
 - https://gobyexample.com/
