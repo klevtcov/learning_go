@@ -23,6 +23,10 @@
 * JSON
 
 
+## Be Geek - изучаем go программирование на golang
+* https://www.youtube.com/playlist?list=PLQuaNOtBP3TpjiROGjy3-hEr5xL0fN9bX
+
+
 ### References
 - https://golang.org/
 - https://gobyexample.com/
