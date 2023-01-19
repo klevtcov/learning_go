@@ -1,2 +1,2 @@
-*.pdf
-*.epub
+books/books/*.pdf
+books/books/*.epub
