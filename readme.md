@@ -33,6 +33,9 @@
 * Hands-On High Performance with Go (2020) - Практическое программирование на Go
 * A Complete Guide to Docker for Operations and Development: Test-Prep for the Docker Certified Associate (DCA) Exam
 * Ultimate Go Notebook - курс для продвинутых, идеально - после пары лет практики
+* Cloud Native Go. Книга облачный GO
+* Go: идиомы и паттерны проектирования
+* Efficient Go. Эффективный GO.
 
 
 ### References
