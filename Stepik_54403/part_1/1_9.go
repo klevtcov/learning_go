@@ -1,8 +1,6 @@
-package main
+package m1_9
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
@@ -124,14 +122,14 @@ func main() {
 	// Выходные данные
 	// Требуется вывести слово YES, если год является високосным и NO - в противном случае.
 
-	var a int
-	fmt.Scan(&a)
+	// var a int
+	// fmt.Scan(&a)
 
-	if (a%400 == 0) || (a%4 == 0) && (a%100 != 0) {
-		fmt.Println("YES")
-	} else {
-		fmt.Println("NO")
-	}
+	// if (a%400 == 0) || (a%4 == 0) && (a%100 != 0) {
+	// 	fmt.Println("YES")
+	// } else {
+	// 	fmt.Println("NO")
+	// }
 
-	fmt.Println("")
+	fmt.Println("end")
 }
