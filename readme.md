@@ -27,6 +27,14 @@
 * https://www.youtube.com/playlist?list=PLQuaNOtBP3TpjiROGjy3-hEr5xL0fN9bX
 
 
+## Книги по GO
+* Network_Programming_with_Go - СЕТЕВОЕ ПРОГРАММИРОВАНИЕ С GO: пишите безопасные и надежные сетевые сервисы с нуля
+* An Introduction to Go - Why and how to write good Go code. For beginners.
+* Hands-On High Performance with Go (2020) - Практическое программирование на Go
+* A Complete Guide to Docker for Operations and Development: Test-Prep for the Docker Certified Associate (DCA) Exam
+* Ultimate Go Notebook - курс для продвинутых, идеально - после пары лет практики
+
+
 ### References
 - https://golang.org/
 - https://gobyexample.com/
