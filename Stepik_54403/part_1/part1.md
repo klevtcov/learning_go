@@ -424,7 +424,6 @@ fmt.Println(b) // [1 2 3]
 fmt.Println(c) // [1 2 3]
 fmt.Println(d) // [0 12] - явно указали значение элемента, все предыдущие заполнены нулями
 ```
-+ 
 ```
 a := make([]int, 10, 10) // [0 0 0 0 0 0 0 0 0 0]
 fmt.Println(a)
@@ -460,5 +459,29 @@ fmt.Printf("%q\n", coral)
 ```
 Output
 ["blue coral" "staghorn coral" "pillar coral" "elkhorn coral"]
+```
+
++ Объединение срезов
+Чтобы объединить два среза также можно использовать выражение append(), но при этом необходимо раскрыть аргумент второго элемента, используя синтаксис расширения ...:
+```
+moreCoral := []string{"massive coral", "soft coral"}
+coralSlice = append(coralSlice, moreCoral...)
+```
++ Удаление элемента из среза
+Чтобы удалить элемент, нужно выделить в срез элементы до него, затем элементы после него, а затем объединить два новых среза в один срез, не содержащий удаленного элемента.
+```
+slice = append(slice[:i], slice[i+1:]...)
+```
+```
+coralSlice := []string{"blue coral", "foliose coral", "pillar coral", "elkhorn coral", "black coral", "antipathes", "leptopsammia", "massive coral", "soft coral"}
+coralSlice = append(coralSlice[:3], coralSlice[4:]...)
+fmt.Printf("%q\n", coralSlice)
+```
+
++ Функция append - добавление элементов в срез
+```
+a := []int{1, 2, 3}
+a = append(a, 4, 5)
+fmt.Println(a) // [1 2 3 4 5]
 ```
 
