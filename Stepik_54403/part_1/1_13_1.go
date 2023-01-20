@@ -48,15 +48,22 @@ func main() {
 	// Выходные данные
 	// Программа должна вывести введенное число n и одно из слов (на латинице): korov, korova или korovy, например, 1 korova, 2 korovy, 5 korov.
 	// Между числом и словом должен стоять ровно один пробел.
-	var n int
-	switch {
-	case 1 <= n && n <= 4:
-		fmt.Println("от 1 до 9")
-	case 100 <= c && c <= 250:
-		fmt.Println("от 100 до 250")
-	case 1000 <= c && c <= 6000:
-		fmt.Println("от 1000 до 6000")
-	}
+	// 1, 21, 31 ... 91 - корова n % 10 == 1 && n != 11
+	// 2, 3, 4 , 22-24 .. 94 коровы - (2 <= n % 10 && n%10 <= 4)
+	// 5 - 20, 25-30...95 коров - (4 < n && n < 21) || (4 < n % 10 && n % 10 < 10
+
+	// var n int
+	// fmt.Scan(&n)
+	// switch {
+	// case n % 10 == 1 && n != 11:
+	// 	fmt.Println(n, "korova")
+	// case 5 <= n && n <= 20:
+	// 	fmt.Println(n, "korov")
+	// case 2 <= n % 10 && n%10 <= 4:
+	// 	fmt.Println(n, "korovy")
+	// default:
+	// 	fmt.Println(n, "korov")
+	// }
 
 	fmt.Println(" ")
 }
