@@ -44,3 +44,4 @@
 - https://godoc.org/
 - https://riptutorial.com/go/example/6056/ping-pong-with-two-goroutines
 - https://heroku.com/
+- https://www.digitalocean.com/community/tutorials/understanding-arrays-and-slices-in-go-ru

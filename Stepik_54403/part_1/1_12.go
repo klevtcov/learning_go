@@ -1,4 +1,4 @@
-package main
+package m1_12
 
 import "fmt"
 
@@ -46,5 +46,5 @@ func main() {
 	// 	fmt.Print(i, " ",)}
 
 	// fmt.Println(workArray)
-
+	fmt.Println("end")
 }
