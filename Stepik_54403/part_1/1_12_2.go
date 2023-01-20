@@ -1,4 +1,4 @@
-package main
+package m1_12_2
 
 import "fmt"
 
@@ -62,21 +62,21 @@ func main() {
 	// Выходные данные
 	// Необходимо вывести единственное число - количество положительных элементов в последовательности.
 
-	var n int
-	fmt.Scan(&n)
-	answer := 0
-	array := make([]int, n)
-	for i := 0; i < len(array); i++ {
-		var a int
-		fmt.Scan(&a)
-		array[i] = a
-	}
-	for i := 0; i < len(array); i++ {
-		if array[i] > 0 {
-			answer++
-		}
-	}
-	fmt.Println(answer)
+	// var n int
+	// fmt.Scan(&n)
+	// answer := 0
+	// array := make([]int, n)
+	// for i := 0; i < len(array); i++ {
+	// 	var a int
+	// 	fmt.Scan(&a)
+	// 	array[i] = a
+	// }
+	// for i := 0; i < len(array); i++ {
+	// 	if array[i] > 0 {
+	// 		answer++
+	// 	}
+	// }
+	// fmt.Println(answer)
 
-	// fmt.Println("end")
+	fmt.Println("end")
 }
