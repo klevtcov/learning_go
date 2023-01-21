@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 
@@ -64,6 +67,18 @@ func main() {
 	// default:
 	// 	fmt.Println(n, "korov")
 	// }
+
+	// По данному числу N распечатайте все целые значения степени двойки, не превосходящие N, в порядке возрастания.
+	// Входные данные 50
+	// Вводится натуральное число.
+	// Выходные данные 1 2 4 8 16 32
+	var n float64
+	fmt.Scan(&n)
+	for i := float64(0); i <= n; i++ {
+		if math.Pow(2, i) <= n {
+			fmt.Printf("%.0f ", math.Pow(2, i))
+		}
+	}
 
 	fmt.Println(" ")
 }
