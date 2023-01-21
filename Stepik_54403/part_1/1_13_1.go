@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
@@ -72,13 +71,32 @@ func main() {
 	// Входные данные 50
 	// Вводится натуральное число.
 	// Выходные данные 1 2 4 8 16 32
-	var n float64
-	fmt.Scan(&n)
-	for i := float64(0); i <= n; i++ {
-		if math.Pow(2, i) <= n {
-			fmt.Printf("%.0f ", math.Pow(2, i))
-		}
-	}
+	// var n float64
+	// fmt.Scan(&n)
+	// for i := float64(0); i <= n; i++ {
+	// 	if math.Pow(2, i) <= n {
+	// 		fmt.Printf("%.0f ", math.Pow(2, i))
+	// 	}
+	// }
+
+	// Номер числа Фибоначчи
+	// Дано натуральное число A > 1. Определите, каким по счету числом Фибоначчи оно является, то есть выведите такое число n,
+	// что φn=A. Если А не является числом Фибоначчи, выведите число -1.
+	// Входные данные 8
+	// Выходные данные 6
+	// var a int
+	// count := 1
+	// previous := 0
+	// fmt.Scan(&a)
+	// for i := 1; i <= a; {
+	// 	previous, i = i, previous+i
+	//     count++
+	// 	if i == a {
+	// 		fmt.Println(count)
+	// 		return
+	// 	}
+	// }
+	// fmt.Println("-1")
 
 	fmt.Println(" ")
 }
