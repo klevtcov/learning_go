@@ -1,4 +1,4 @@
-package main
+package m_13_1_1
 
 import (
 	"fmt"
@@ -104,9 +104,31 @@ func main() {
 	// Задано единственное число N
 	// Выходные данные 1100
 	// Необходимо вывести требуемое представление числа N.
-	var a int
-	fmt.Scan(&a)
-	fmt.Printf("%b", a)
+	// var a int
+	// fmt.Scan(&a)
+	// fmt.Printf("%b", a)
 
-	fmt.Println(" ")
+	// Из натурального числа удалить заданную цифру.
+	// Входные данные 38012732 3
+	// Вводятся натуральное число и цифра, которую нужно удалить.
+	// Выходные данные 801272
+	// Вывести число без заданных цифр.
+	// var str, n string
+	// var result []string
+	// fmt.Scan(&str, &n)
+	// for i := range str {
+	// 	if string(str[i]) != n {
+	// 		result = append(result, string(str[i]))
+	// 	}
+	// }
+	// for _, val := range result {
+	// 	fmt.Printf(val)
+	// }
+
+	// из комментов
+	// var d, n string
+	// fmt.Scan(&d, &n)
+	// fmt.Print(strings.Replace(d,n,"",-1))
+
+	fmt.Printf(" ")
 }
