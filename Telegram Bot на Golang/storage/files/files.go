@@ -2,6 +2,8 @@ package files
 
 import (
 	"encoding/gob"
+	"errors"
+	"fmt"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -82,8 +84,52 @@ func (s Storage) PickRandom(userName string) (page *storage.Page, err error) {
 
 	// для возврата страницы
 	// open decode
+	// по имени файла декодируем страницу
+	return s.decodePage(filepath.Join(path, file.Name()))
 
 }
+
+// удаление файла
+
+func (s Storage) Remove(p *storage.Page) error {
+	fileName, err := fileName(p)
+	if err != nil {
+		return e.Wrap("can't remove file: ", err)
+	}
+
+	path := filepath.Join(s.basePath, p.UserName, fileName)
+
+	if err := os.Remove(path); err != nil {
+		msg := fmt.Sprintf("can't remove file %s: ", path)
+		return e.Wrap(msg, err)
+	}
+
+	return nil
+}
+
+// проверяем наличие ссылки в сохранённых
+
+func (s Storage) IsExist(p *storage.Page) (bool, error) {
+	fileName, err := fileName(p)
+	if err != nil {
+		return false, e.Wrap("can't check if file exists: ", err)
+	}
+
+	path := filepath.Join(s.basePath, p.UserName, fileName)
+
+	switch _, err = os.Stat(path); {
+	case errors.Is(err, os.ErrNotExist):
+		return false, nil
+	case err != nil:
+		msg := fmt.Sprintf("can't check if file %s exists", path)
+
+		return false, e.Wrap(msg, err)
+	}
+
+	return true, nil
+}
+
+// декодирование траницы по имени файла
 
 func (s Storage) decodePage(filePath string) (*storage.Page, error) {
 	// открываем файл, читаем содержимое в переменную f
@@ -93,11 +139,16 @@ func (s Storage) decodePage(filePath string) (*storage.Page, error) {
 	}
 
 	// закрываем файл по окончанию чтения
-	defer func() {_=f.Close()} ()
+	defer func() { _ = f.Close() }()
 
 	var p storage.Page
 
-	if err :=
+	// декодируем файл
+	if err := gob.NewDecoder(f).Decode(&p); err != nil {
+		return nil, e.Wrap("can't decode page", err)
+	}
+
+	return &p, nil
 }
 
 func fileName(p *storage.Page) (string, error) {
