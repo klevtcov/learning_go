@@ -18,4 +18,7 @@ const (
 type Event struct {
 	Type Type
 	Text string
+	// текст и тип могут быть в любом мессенджере, а другие поля могут быть разные
+	// для тг реализация будет следующая (telegram.go.Meta)
+	Meta interface{}
 }
