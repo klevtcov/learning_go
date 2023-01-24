@@ -22,7 +22,7 @@ type Meta struct {
 
 var (
 	ErrUnknownEventType = errors.New("unknown event type")
-	ErrUnknownMetaType = errors.New("unknown meta type")
+	ErrUnknownMetaType  = errors.New("unknown meta type")
 )
 
 func New(client *telegram.Client, storage storage.Storage) *Processor {
@@ -63,8 +63,8 @@ func (p *Processor) Fetch(limit int) ([]events.Event, error) {
 // выполняет различные действия, в зависимости от типа ивенда
 
 func (p *Processor) Process(event events.Event) error {
-	switch event.Type{
-	case: event.Message:
+	switch event.Type {
+	case event.Message:
 		p.processMessage(event)
 	default:
 		return e.Wrap("can't process message: ", ErrUnknownEventType)
@@ -72,17 +72,17 @@ func (p *Processor) Process(event events.Event) error {
 }
 
 func (p *Processor) processMessage(event events.Event) {
-	meta, err:= meta(event)
+	meta, err := meta(event)
 	if err != nil {
 		return e.Wrap("can't process message: ", err)
 	}
 
 	// в зависимости от типа сообщения, гнам надо выполнить разные действия
-	
+
 }
 
 func meta(event events.Event) (Meta, error) {
-	res, ok:= event.Meta.(Meta)
+	res, ok := event.Meta.(Meta)
 	if !ok {
 		return Meta{}, e.Wrap("can't get meta: ", ErrUnknownMetaType)
 	}
