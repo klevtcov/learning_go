@@ -2,18 +2,36 @@ package main
 
 import (
 	"flag"
-	"github.com/klevtcov/tg-bot/clients/telegram"
 	"log"
+
+	tgClient "github.com/klevtcov/tg-bot/clients/telegram"
+	event_consumer "github.com/klevtcov/tg-bot/consumer/event-consumer"
+	"github.com/klevtcov/tg-bot/events/telegram"
+	"github.com/klevtcov/tg-bot/storage/files"
 )
 
 const (
-	tgBotHost = "api.telegram.org"
+	tgBotHost   = "api.telegram.org"
+	storagePath = "storage"
+	batchSize   = 100
 )
 
 func main() {
 	// token = flags.Get(token)
 
-	tgClient = telegram.New(tgBotHost, mustToken())
+	// tgClient := telegram.New(tgBotHost, mustToken())
+
+	eventsProccessor := telegram.New(
+		tgClient.New(tgBotHost, mustToken()),
+		files.New(storagePath),
+	)
+
+	log.Print("service started")
+
+	consumer := event_consumer.New(eventsProccessor, eventsProccessor, batchSize)
+	if err := consumer.Start(); err != nil {
+		log.Fatal("service is stopped", err)
+	}
 
 	// fetcher = fetcher.New(tgClient) - будет получать данный с тг
 
@@ -31,7 +49,7 @@ func main() {
 func mustToken() string {
 	// bot - tg-bot-token 'my token' - будем указывать токен в виде флага
 	token := flag.String(
-		"token-bot-token",
+		"tg-bot-token",
 		"",
 		"token for access to telegramm bot",
 	)

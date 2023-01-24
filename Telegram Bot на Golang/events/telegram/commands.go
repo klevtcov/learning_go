@@ -29,13 +29,18 @@ func (p *Processor) doCmd(text string, chatID int, username string) error {
 
 	if isAddCmd(text) {
 		// TODO: addPage()
+		return p.savePage(chatID, text, username)
 	}
 
 	switch text {
 	case RndCmd:
+		return p.sendRandom(chatID, username)
 	case HelpCmd:
+		return p.sendHelp(chatID)
 	case StartCmd:
+		return p.sendHello(chatID)
 	default:
+		return p.tg.SendMessage(chatID, msgUnknownCommand)
 	}
 
 }
@@ -84,13 +89,25 @@ func (p *Processor) sendRandom(chatID int, username string) (err error) {
 		return err
 	}
 
+	// если ошибка есть, отправляем сообщение пользователю
 	if errors.Is(err, storage.ErrNoSavedPages) {
 		return p.tg.SendMessage(chatID, msgNoSavedPages)
 	}
 
+	// пытаемся отправить пользователю адрес страницы
 	if err := p.tg.SendMessage(chatID, page.URL); err != nil {
 		return err
 	}
+
+	return p.storage.Remove((page))
+}
+
+func (p *Processor) sendHelp(chatID int) error {
+	return p.tg.SendMessage(chatID, msgHelp)
+}
+
+func (p *Processor) sendHello(chatID int) error {
+	return p.tg.SendMessage(chatID, msgHello)
 }
 
 func isAddCmd(text string) bool {
