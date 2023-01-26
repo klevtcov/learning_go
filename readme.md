@@ -38,8 +38,6 @@
 * Простейший эхо-бот для Телеграмма на Go
 
 
-
-
 ## Книги по GO
 * Network_Programming_with_Go - СЕТЕВОЕ ПРОГРАММИРОВАНИЕ С GO: пишите безопасные и надежные сетевые сервисы с нуля
 * An Introduction to Go - Why and how to write good Go code. For beginners.
