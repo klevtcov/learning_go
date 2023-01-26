@@ -1,11 +1,52 @@
 package main
 
 import (
-	"bufio"
-	"fmt"
-	"os"
+// "fmt"
+// "strings"
 )
 
+func main() {
+
+}
+
+// На вход дается строка, из нее нужно сделать другую строку, оставив только нечетные символы (считая с нуля)
+
+// Sample Input: ihgewlqlkot
+// Sample Output: hello
+
+// var str string
+// fmt.Scan(&str)
+// strRune := []rune(str)
+// var result []string
+// if len(strRune) < 2 {
+// 	fmt.Println(str)
+// 	return
+// }
+// for i := 1; i < len(strRune); i = i + 2 {
+// 	result = append(result, string(strRune[i]))
+// }
+
+// for _, val := range result {
+// 	fmt.Printf(val)
+// }
+
+//
+//
+// Даются две строки X и S. Нужно найти и вывести первое вхождение подстроки S в строке X. Если подстроки S нет в строке X - вывести -1
+
+// Sample Input: awesome es
+// Sample Output: 2
+
+// var x, s string
+// fmt.Scan(&x, &s)
+// if strings.Contains(x, s) {
+// 	fmt.Println(strings.Index(x, s)) // -1 возвращается по умолчанию.
+// } else {
+// 	fmt.Println(-1)
+// }
+
+//
+//
 // На вход подается строка. Нужно определить, является ли она правильной или нет.
 // Правильная строка начинается с заглавной буквы и заканчивается точкой. Если
 // строка правильная - вывести Right иначе - вывести Wrong
@@ -57,20 +98,17 @@ import (
 // }
 // fmt.Print("Палиндром")
 
-func main() {
-	// var str string
-	// str, _ := bufio.NewReader(os.Stdin).ReadString('\n')
-	// fmt.Println(isPalindrome(str))
+// var str string
+// str, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+// fmt.Println(isPalindrome(str))
 
-	// s := "топот"
-	// a := "закз"
-	// b := "абба"
-	// c := "манеенам"
-	// d := "надда"
-	// fmt.Println(isPalindrome(s), " - s")
-	// fmt.Println(isPalindrome(a), " - a")
-	// fmt.Println(isPalindrome(b), " - b")
-	// fmt.Println(isPalindrome(c), " - c")
-	// fmt.Println(isPalindrome(d), " - d")
-
-}
+// s := "топот"
+// a := "закз"
+// b := "абба"
+// c := "манеенам"
+// d := "надда"
+// fmt.Println(isPalindrome(s), " - s")
+// fmt.Println(isPalindrome(a), " - a")
+// fmt.Println(isPalindrome(b), " - b")
+// fmt.Println(isPalindrome(c), " - c")
+// fmt.Println(isPalindrome(d), " - d")
