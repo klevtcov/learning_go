@@ -1,14 +1,83 @@
-package main
+package m2_5
 
 import (
-// "fmt"
-// "strings"
+	"fmt"
+	"unicode"
 )
 
 func main() {
 
+	var str string
+	fmt.Scan(&str)
+	runeStr := []rune(str)
+	if len(runeStr) < 5 {
+		fmt.Println("Wrong password")
+		return
+	} else {
+		for _, val := range runeStr {
+			if unicode.IsDigit(val) || unicode.Is(unicode.Latin, val) {
+				continue
+			} else {
+				fmt.Println("Wrong password")
+				return
+			}
+		}
+	}
+	fmt.Println("Ok")
+
 }
 
+//
+// Ваша задача сделать проверку подходит ли пароль вводимый пользователем под заданные требования.
+// Длина пароля должна быть не менее 5 символов, он должен содержать только арабские цифры и буквы
+// латинского алфавита. На вход подается строка-пароль. Если пароль соответствует требованиям -
+// вывести "Ok", иначе вывести "Wrong password"
+// проверка символа на цифру
+//  fmt.Println(unicode.IsDigit('1')) // true
+// например, проверка на латиницу:
+// fmt.Println(unicode.Is(unicode.Latin, 'ы')) // false
+
+// можно проверять сразу на два условия
+// if unicode.In(ch, unicode.Latin, unicode.Digit) == false {
+// 	output = "Wrong password"
+// }
+//
+//
+
+// var str string
+// fmt.Scan(&str)
+// runeStr := []rune(str)
+// if len(runeStr) < 5 {
+// 	fmt.Println("Wrong password")
+// 	return
+// } else {
+// 	for _, val := range runeStr {
+// 		if unicode.IsDigit(val) || unicode.Is(unicode.Latin, val) {
+// 			continue
+// 		} else {
+// 			fmt.Println("Wrong password")
+// 			return
+// 		}
+// 	}
+// }
+// fmt.Println("Ok")
+
+//
+//
+// Дается строка. Нужно удалить все символы, которые встречаются более одного раза и вывести получившуюся строку
+// Sample Input: zaabcbd
+// Sample Output: zcd
+
+// var str string
+// fmt.Scan(&str)
+// runeStr := []rune(str)
+// for _, val := range runeStr {
+// 	if strings.Count(string(runeStr), string(val)) == 1 {
+// 		fmt.Printf(string(val))
+// 	}
+// }
+
+//
 // На вход дается строка, из нее нужно сделать другую строку, оставив только нечетные символы (считая с нуля)
 
 // Sample Input: ihgewlqlkot
