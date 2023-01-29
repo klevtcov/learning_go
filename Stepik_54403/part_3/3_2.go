@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
-	// "strconv"
+	"strconv"
 	"strings"
 	// "unicode"
 )
@@ -17,13 +17,25 @@ func main() {
 	}
 	str = strings.Replace(str, " ", "", -1)
 	str = strings.Replace(str, ",", ".", -1)
-	var str1 []string
-	str1 = strings.Split(str, ";")
-	var result float64
+	var strArr []string
+	strArr = strings.Split(str, ";")
+	fmt.Println(strArr[0])
+	fmt.Println(strArr[1])
+	str1, _ := strconv.ParseFloat(string(strArr[0]), 64)
+	str2, _ := strconv.ParseFloat(string(strArr[1]), 64)
+
+	fmt.Printf("%T ", str1)
+	fmt.Println(str1)
+	fmt.Printf("%T ", str2)
+	fmt.Println(str2)
+	// result := str1 / str2
+	// fmt.Printf("%.4f", result)
 
 	// fmt.Println(" ")
 }
 
+// Sample Input: 1 149,6088607594936;1 179,0666666666666
+// Sample Output: 0.9750
 // Для решения данной задачи вам понадобится пакет strconv, возможно использовать пакеты strings или encoding/csv,
 // или даже bufio - вы не ограничены в выборе способа решения задачи. В решениях мы поделимся своими способами решения
 // этой задачи, предлагаем вам сделать то же самое.
@@ -43,8 +55,7 @@ func main() {
 // 	...
 // }
 //
-// Sample Input: 1 149,6088607594936;1 179,0666666666666
-// Sample Output: 0.9750
+
 //
 //
 // Представьте что вы работаете в большой компании где используется модульная архитектура. Ваш коллега написал модуль с какой-то
