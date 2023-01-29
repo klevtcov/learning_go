@@ -291,3 +291,24 @@ if err != nil { // не забываем проверить ошибку
 fmt.Println(res)      // true
 fmt.Printf("%T", res)  // bool
 ```
+
+### считывание данных со стандартного ввода
+```
+scanner := bufio.NewScanner(os.Stdin)
+scanner.Scan()
+s := scanner.Text()
+```
+```
+reader := bufio.NewReader(os.Stdin)
+s,_,_ := reader.ReadLine()
+```
+
+* bufio библиотека https://pkg.go.dev/bufio@go1.19.4
+* os библиотека https://pkg.go.dev/os@go1.19.4
+
+Если пишете эту задачу в IDE и используете ридер bufio, то можете столкнуться с проблемой, что никак \n (ограничитель строки) не удаляется.
+А дело в том, что ранее в этом курсе нам предлагали читать всю строку с консоли таким методом:
+> input, _ = bufio.NewReader(os.Stdin).ReadString('\n')
+Теперь просто запомните, что в IDE (по крайней мере Visual Studio Code) нужно использовать другой ограничитель:
+> input, _ = bufio.NewReader(os.Stdin).ReadString('\r')
+Называется он "возврат каретки" и имеет номер 13 по ASCII. А \n  имеет номер 10 и называется "перевод строки".

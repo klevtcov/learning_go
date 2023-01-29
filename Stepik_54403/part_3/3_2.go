@@ -5,13 +5,18 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"strconv"
+	// "strconv"
 	"strings"
 	// "unicode"
 )
 
 func main() {
-	str, err := bufio.NewReader(os.Stdin).ReadString('\n')
+
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	s := scanner.Text()
+
+	str, err := bufio.NewReader(os.Stdin).ReadString('\r')
 	if err != nil && err != io.EOF {
 		fmt.Println("error: ", err)
 	}
@@ -19,15 +24,22 @@ func main() {
 	str = strings.Replace(str, ",", ".", -1)
 	var strArr []string
 	strArr = strings.Split(str, ";")
-	fmt.Println(strArr[0])
-	fmt.Println(strArr[1])
-	str1, _ := strconv.ParseFloat(string(strArr[0]), 64)
-	str2, _ := strconv.ParseFloat(string(strArr[1]), 64)
+	for ind, val := range strArr {
+		fmt.Println(ind, " ", val)
+	}
+	// var strArr1 string
+	// strArr1 = string(strArr1[1])
+	// fmt.Println(strArr1)
+	// fmt.Println(strArr)
+	// fmt.Println(strArr[0])
+	// fmt.Println(strArr[1])
+	// str1, _ := strconv.ParseFloat(string(strArr[0]), 64)
+	// str2, _ := strconv.ParseFloat(string(strArr[1]), 64)
 
-	fmt.Printf("%T ", str1)
-	fmt.Println(str1)
-	fmt.Printf("%T ", str2)
-	fmt.Println(str2)
+	// fmt.Printf("%T ", str1)
+	// fmt.Println(str1)
+	// fmt.Printf("%T ", str2)
+	// fmt.Println(str2)
 	// result := str1 / str2
 	// fmt.Printf("%.4f", result)
 
