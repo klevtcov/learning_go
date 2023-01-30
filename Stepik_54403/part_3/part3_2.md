@@ -302,6 +302,9 @@ s := scanner.Text()
 reader := bufio.NewReader(os.Stdin)
 s,_,_ := reader.ReadLine()
 ```
+```
+input = strings.TrimRight(input, "\n\r")
+```
 
 * bufio библиотека https://pkg.go.dev/bufio@go1.19.4
 * os библиотека https://pkg.go.dev/os@go1.19.4
@@ -312,3 +315,4 @@ s,_,_ := reader.ReadLine()
 Теперь просто запомните, что в IDE (по крайней мере Visual Studio Code) нужно использовать другой ограничитель:
 > input, _ = bufio.NewReader(os.Stdin).ReadString('\r')
 Называется он "возврат каретки" и имеет номер 13 по ASCII. А \n  имеет номер 10 и называется "перевод строки".
+

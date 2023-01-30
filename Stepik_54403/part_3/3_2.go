@@ -5,16 +5,18 @@ import (
 	"fmt"
 	"io"
 	"os"
-	// "strconv"
+	"strconv"
 	"strings"
 	// "unicode"
 )
 
 func main() {
 
-	scanner := bufio.NewScanner(os.Stdin)
-	scanner.Scan()
-	s := scanner.Text()
+	// scanner := bufio.NewScanner(os.Stdin)
+	// scanner.Scan()
+	// s := scanner.Text()
+	// input = strings.TrimRight(input, "\n\r")
+	// input, _ = bufio.NewReader(os.Stdin).ReadString('\r')
 
 	str, err := bufio.NewReader(os.Stdin).ReadString('\r')
 	if err != nil && err != io.EOF {
@@ -24,9 +26,18 @@ func main() {
 	str = strings.Replace(str, ",", ".", -1)
 	var strArr []string
 	strArr = strings.Split(str, ";")
-	for ind, val := range strArr {
-		fmt.Println(ind, " ", val)
-	}
+	var str1, str2 string
+	str1 = strArr[0]
+	str2 = strArr[1]
+	// var strFloat1, strFloat2 float64
+	strFloat1, _ := strconv.ParseFloat(string(str1), 64)
+	strFloat2, _ := strconv.ParseFloat(string(str2), 64)
+	fmt.Println(strFloat1)
+	fmt.Println(strFloat2)
+
+	// for ind, val := range strArr {
+	// 	fmt.Println(ind, " ", val, ".")
+	// }
 	// var strArr1 string
 	// strArr1 = string(strArr1[1])
 	// fmt.Println(strArr1)
