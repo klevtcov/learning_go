@@ -1,4 +1,4 @@
-package main
+package m3_2
 
 import (
 	"bufio"
@@ -7,55 +7,100 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	// "unicode"
 )
 
 func main() {
-
-	// scanner := bufio.NewScanner(os.Stdin)
-	// scanner.Scan()
-	// s := scanner.Text()
-	// input = strings.TrimRight(input, "\n\r")
-	// input, _ = bufio.NewReader(os.Stdin).ReadString('\r')
 
 	str, err := bufio.NewReader(os.Stdin).ReadString('\r')
 	if err != nil && err != io.EOF {
 		fmt.Println("error: ", err)
 	}
-	str = strings.Replace(str, " ", "", -1)
-	str = strings.Replace(str, ",", ".", -1)
 	var strArr []string
 	strArr = strings.Split(str, ";")
-	var str1, str2 string
-	str1 = strArr[0]
-	str2 = strArr[1]
-	// var strFloat1, strFloat2 float64
-	strFloat1, _ := strconv.ParseFloat(string(str1), 64)
-	strFloat2, _ := strconv.ParseFloat(string(str2), 64)
-	fmt.Println(strFloat1)
-	fmt.Println(strFloat2)
+	strArr[0] = strings.ReplaceAll(strArr[0], " ", "")
+	strArr[1] = strings.ReplaceAll(strArr[1], " ", "")
+	strArr[0] = strings.ReplaceAll(strArr[0], ",", ".")
+	strArr[1] = strings.ReplaceAll(strArr[1], ",", ".")
 
-	// for ind, val := range strArr {
-	// 	fmt.Println(ind, " ", val, ".")
-	// }
-	// var strArr1 string
-	// strArr1 = string(strArr1[1])
-	// fmt.Println(strArr1)
-	// fmt.Println(strArr)
-	// fmt.Println(strArr[0])
-	// fmt.Println(strArr[1])
-	// str1, _ := strconv.ParseFloat(string(strArr[0]), 64)
-	// str2, _ := strconv.ParseFloat(string(strArr[1]), 64)
+	var strFloat1, strFloat2 float64
 
-	// fmt.Printf("%T ", str1)
-	// fmt.Println(str1)
-	// fmt.Printf("%T ", str2)
-	// fmt.Println(str2)
-	// result := str1 / str2
-	// fmt.Printf("%.4f", result)
+	strFloat1, err = strconv.ParseFloat(string(strArr[0]), 64)
+	strFloat2, err = strconv.ParseFloat(string(strArr[1]), 64)
 
-	// fmt.Println(" ")
+	result := strFloat1 / strFloat2
+	fmt.Printf("%.4f", result)
 }
+
+//
+// Другие решения
+//
+// ! Внимание! Использовать fmt для конвертации нежелательно из-за того что производительность ниже по сравнению с strconv.
+// func main() {
+//     var a, b float64
+// 	c, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+// 	c = strings.Replace(c, " ", "", -1)
+// 	c = strings.Replace(c, ",", ".", -1)
+// 	fmt.Sscanf(c, "%f;%f", &a, &b)
+// 	fmt.Printf("%.4f\n", a / b)
+// }
+//
+// Форматирование можно применять к результату вычислений, не создавая дополнительных переменных
+// text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+// text = strings.Replace(text, " ", "", -1)
+// text = strings.Replace(text, ",", ".", -1)
+// t := strings.Split(text, ";")
+
+// a, _ := strconv.ParseFloat(t[0], 64)
+// b, _ := strconv.ParseFloat(t[1], 64)
+// fmt.Printf("%.4f", a / b)
+//
+//
+//
+//
+//
+//
+
+// scanner := bufio.NewScanner(os.Stdin)
+// scanner.Scan()
+// s := scanner.Text()
+// input = strings.TrimRight(input, "\n\r")
+// input, _ = bufio.NewReader(os.Stdin).ReadString('\r')
+
+// fmt.Printf("%T ", strFloat1)
+// fmt.Println(strFloat1)
+// fmt.Printf("%T ", strFloat2)
+// fmt.Println(strFloat2)
+
+// for ind, val := range strArr {
+// 	fmt.Println("index - ", ind)
+// 	fmt.Println("value - ", val)
+// }
+
+// str = strings.Replace(str, " ", "", -1)
+// str = strings.Replace(str, ",", ".", -1)
+
+// var str1, str2 string
+// str1 = strArr[0]
+// str2 = strArr[1]
+// // var strFloat1, strFloat2 float64
+// strFloat1, _ := strconv.ParseFloat(string(str1), 64)
+// strFloat2, _ := strconv.ParseFloat(string(str2), 64)
+// fmt.Println(strFloat1)
+// fmt.Println(strFloat2)
+
+// for ind, val := range strArr {
+// 	fmt.Println(ind, " ", val, ".")
+// }
+// var strArr1 string
+// strArr1 = string(strArr1[1])
+// fmt.Println(strArr1)
+// fmt.Println(strArr)
+// fmt.Println(strArr[0])
+// fmt.Println(strArr[1])
+// str1, _ := strconv.ParseFloat(string(strArr[0]), 64)
+// str2, _ := strconv.ParseFloat(string(strArr[1]), 64)
+
+// fmt.Println(" ")
 
 // Sample Input: 1 149,6088607594936;1 179,0666666666666
 // Sample Output: 0.9750
