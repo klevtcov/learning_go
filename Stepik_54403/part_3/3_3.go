@@ -3,24 +3,30 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"strings"
 )
 
 func main() {
 
 	fn := func(i uint) uint {
 		str := strconv.Itoa(int(i))
-		// strRune := []string
-		fmt.Println(str)
-		var result string
-		for _, val := range str {
+		runes := []rune(str)
+		fmt.Println(runes)
+		var result []rune
+		for _, val := range runes {
 			val -= '0'
 			if val%2 == 0 && val != '0' {
-				result += string(val)
+				result = append(result, val+'0')
 			}
 		}
 		fmt.Println(result)
-		res, _ := strconv.Atoi(result)
-		return uint(res)
+		s := string(([]rune(result)))
+		si, _ := strconv.Atoi(s)
+		// res, _ := strconv.Atoi(result)
+		if si == 0 {
+			return uint(100)
+		}
+		return uint(si)
 	}
 	fmt.Println(fn(272178))
 
