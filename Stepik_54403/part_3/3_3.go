@@ -1,9 +1,10 @@
-package main
+package m3_3
 
 import (
 	"fmt"
 	"strconv"
-	"strings"
+	// "strings"
+	// "unicode/utf8"
 )
 
 func main() {
@@ -15,33 +16,101 @@ func main() {
 		var result []rune
 		for _, val := range runes {
 			val -= '0'
-			if val%2 == 0 && val != '0' {
+			if val%2 == 0 && val != 0 {
 				result = append(result, val+'0')
 			}
 		}
-		fmt.Println(result)
-		s := string(([]rune(result)))
+		var s string
+		s = string(result)
 		si, _ := strconv.Atoi(s)
-		// res, _ := strconv.Atoi(result)
 		if si == 0 {
 			return uint(100)
 		}
 		return uint(si)
 	}
-	fmt.Println(fn(272178))
-
-	// src = strings.Map(func(r rune) rune {return unicode.ToUpper(r)}, src)
-
-	// вычитаем из ASCII-символа цифры значение ASCII-символа нуля, получаем собственно цифру.
-	// var s string
-	// fmt.Scan(&s)
-	// for _, c := range s {
-	// 	c -= '0'
-	// 	fmt.Print(c * c)
-	// }
+	fmt.Println(fn(6554))
 
 }
 
+//
+// Проще через математику решать, чем через преобразование типов. так говнокода больше, но интеерснее, и ближе к теме
+//
+// fn := func(i uint) uint {
+// 	str := strconv.Itoa(int(i))
+// 	runes := []rune(str)
+// 	fmt.Println(runes)
+// 	var result []rune
+// 	for _, val := range runes {
+// 		val -= '0'
+// 		if val%2 == 0 && val != 0 {
+// 			result = append(result, val+'0')
+// 		}
+// 	}
+// 	var s string
+// 	s = string(result)
+// 	si, _ := strconv.Atoi(s)
+// 	if si == 0 {
+// 		return uint(100)
+// 	}
+// 	return uint(si)
+// }
+//
+// Решения здорового человека:
+//
+// fn := func(n uint) uint {
+// 	str := strconv.FormatUint(uint64(n), 10)
+// 	apstr := []rune{}
+// 	for _, elem := range str {
+
+// 		if elem%2 == 0 && elem != '0' {
+// 			apstr = append(apstr, elem)
+// 		}
+// 	}
+
+// 	bar, err := strconv.ParseUint(string(apstr), 10, 64)
+// 	if bar == 0 {
+// 		return 100
+// 	}
+// 	if err != nil {
+// 		panic(err)
+// 	}
+
+// 	return uint(bar)
+// }
+//
+//  Через математику:
+//
+// fn := func (x uint) (y uint) {
+//     for k := uint(1); x > 0; x /= 10 {
+//         if d := x % 10; d % 2 == 0 && d != 0 {
+//             y += k * d
+//             k *= 10
+//         }
+//     }
+//     if y == 0 {
+//         y = 100
+//     }
+//     return
+// }
+//
+//
+// fn := func(X uint) uint {
+//     var x uint
+//     s := strconv.FormatUint(uint64(X), 10)
+//     for i := range s {
+//         if s[i] % 2 == 0 && s[i] != '0' {
+//             x = x * 10 + uint(s[i] - '0')
+//         }
+//     }
+//     if x == 0 {
+//         x = 100
+//     }
+//     return x
+// }
+//
+//
+//
+//
 // Используем анонимные функции на практике.
 
 // Внутри функции main (объявлять ее не нужно) вы должны объявить функцию вида func(uint) uint, которую внутри функции main
