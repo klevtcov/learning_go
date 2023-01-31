@@ -33,6 +33,11 @@
 * В качестве интерфейса использует Телеграмм-бота
 
 
+## DigitalOcean – Tytorial
++ https://www.digitalocean.com/community/tutorials/understanding-arrays-and-slices-in-go-ru
++ https://www.digitalocean.com/community/tutorials
+
+
 ## TG-bot - youtube - просто разработка
 * https://www.youtube.com/watch?v=gegtZMx7poE
 * Простейший эхо-бот для Телеграмма на Go
