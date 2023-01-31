@@ -1,4 +1,4 @@
-package main
+package m_task2
 
 import (
 	"bufio"
@@ -43,3 +43,40 @@ func main() {
 		counter++
 	}
 }
+
+//
+// Другие решения
+//
+//Через массив
+// func main() {
+// 	file, _ := os.ReadFile("task.data")
+// 	arr := strings.Split(string(file), ";")
+// 	for i := range arr {
+// 	   if arr[i] == "0" {
+// 		  fmt.Println(i + 1)
+// 	   }
+// 	}
+//  }
+// ----------------------------
+//
+// Через CSV
+//
+// func main() {
+
+// 	file, err := os.Open("task.data")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	defer file.Close()
+// 	reader := csv.NewReader(file)
+// 	reader.Comma = ';'
+// 	record, err := reader.Read()
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	for i, s := range record {
+// 		if s == "0" {
+// 			fmt.Printf("Индекс %v число %v\n", i+1, s)
+// 		}
+// 	}
+// }
