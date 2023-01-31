@@ -2,8 +2,7 @@ package main
 
 import (
 	"bufio"
-	"fmt"
-	// "io"
+	"io"
 	"os"
 	"strconv"
 )
@@ -16,7 +15,8 @@ func Main() {
 		inted, _ := strconv.Atoi(str.Text())
 		result += inted
 	}
-	fmt.Println(result)
+	resString := strconv.Itoa(result)
+	io.WriteString(os.Stdout, resString)
 }
 
 // Ранее в рамках этого курса при решении задач требовалось прочитать что-то со стандартного ввода и вывести результат
