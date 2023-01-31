@@ -367,3 +367,4 @@ func main() {
       }
 ```
 
++ https://metanit.com/go/tutorial/8.9.php
