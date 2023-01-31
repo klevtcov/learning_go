@@ -1,14 +1,34 @@
-package main
+package m3_4
 
 import (
 	"fmt" // пакет используется для проверки ответа, не удаляйте его
+	"strings"
 )
 
-func main() {
-
-	fmt.Println()
+type Battery struct {
+	Charge string
 }
 
+func (b Battery) String() string {
+	count := 0
+	for _, val := range b.Charge {
+		if string(val) == "0" {
+			count++
+		}
+	}
+
+	return fmt.Sprintf("[" + strings.Repeat(" ", count) + strings.Repeat("X", 10-count) + "]")
+}
+
+func main() {
+	// var input string
+	// fmt.Scan(&input)
+	// batteryForTest := Battery{input}
+
+}
+
+// 1000010011
+// [      XXXX]
 // Давайте используем ваши знания структур, методов и интерфейсов на практике и реализуем объект, удовлетворяющий интерфейсу
 // fmt.Stringer. Назовем его "Батарейка".
 
@@ -26,6 +46,60 @@ func main() {
 // Перед этой скобкой присутствует функция (которая вам тоже не видна), принимающая в качестве аргумента объект типа
 // fmt.Stringer - batteryForTest, и направляющая его на стандартный вывод, поэтому вам не требуется выводить что-то на печать самостоятельно.
 //
+//
+// package main
+// import (
+// 	"fmt" // пакет используется для проверки ответа, не удаляйте его
+// 	"strings"
+// )
+// type Battery struct {
+// 	Charge string
+// }
+// func (b Battery) String() string {
+// 	count := 0
+// 	for _, val := range b.Charge {
+// 		if string(val) == "0" {
+// 			count++
+// 		}
+// 	}
+// 	return fmt.Sprintf("[" + strings.Repeat(" ", count) + strings.Repeat("X", 10-count) + "]")
+// }
+// func main() {
+// 	var input string
+// 	fmt.Scan(&input)
+// 	batteryForTest := Battery{input}
+// }
+//
+//
+//
+// Другие решения. Через форматирование строки. подсчет единиц через метод Count
+// type battery uint8
+
+// func (b *battery) set(str string) {
+// 	*b = battery(strings.Count(str, `1`))
+// }
+
+// func (b battery) String() string {
+// 	return fmt.Sprintf("[%10s]", strings.Repeat("X", int(b)))
+// }
+
+// func main() {
+// 	var batteryForTest battery
+// 	var str string
+// 	fmt.Scan(&str)
+// 	batteryForTest.set(str)
+// }
+//
+//
+// Все вычисления и форматирование в одной строке
+//
+// type battery string
+// func (b battery) String() string {
+//     return fmt.Sprintf("[%10s]", strings.Repeat("X", strings.Count(string(b), "1")))
+// }
+// func main() {
+//     var batteryForTest battery
+//     fmt.Scan(&batteryForTest)
 //
 //
 // ------------------------------------------------------------------------------------------------------
