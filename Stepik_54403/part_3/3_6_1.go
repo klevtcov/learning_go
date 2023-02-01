@@ -1,4 +1,4 @@
-package main
+package m3_6_1
 
 import (
 	"encoding/json"
@@ -13,7 +13,7 @@ type Global []struct {
 
 // func (g *Global) Summ() int {
 // 	summ := 0
-// 	for i := 0; i < len(g.I); i++ {
+// 	for i := 0; i < len(g.Id); i++ {
 // 		summ += g[i].Id
 // 	}
 // 	for _, val := range g {
@@ -42,7 +42,11 @@ func main() {
 		return
 	}
 
-	fmt.Println(dataJson[0])
+	var result int
+	for i := 0; i < len(dataJson); i++ {
+		result += dataJson[i].Id
+	}
+	fmt.Println(result)
 
 	// var result int
 	// for _, val := range dataJson {
@@ -74,3 +78,72 @@ func main() {
 
 // Для того, чтобы показать, что вы действительно смогли декодировать документ вам необходимо в качестве ответа записать
 // сумму полей global_id всех элементов, закодированных в файле.
+//
+//
+// func main() {
+// 	var items []struct {
+// 		ID uint64 `json:"global_id"`
+// 	}
+// 	f, _ := os.Open("data-20190514T0100.json")
+// 	json.NewDecoder(f).Decode(&items)
+// 	var sum uint64
+// 	for _, item := range items {
+// 		sum += item.ID
+// 	}
+// 	fmt.Println(sum)
+// }
+//
+//----------------------------------
+//
+// Через map
+//
+// jsonFile, err := os.Open("data-20190514T0100.json")
+
+// if err != nil {
+//    fmt.Println(err)
+// }
+
+// defer jsonFile.Close()
+
+// total := 0
+// byteValue, _ := ioutil.ReadAll(jsonFile)
+
+// resultj := []map[string]interface{}{}
+
+// err = json.Unmarshal([]byte(byteValue), &resultj)
+
+// for _, v := range resultj {
+// 	for key, val := range v {
+// 		if "global_id" == key {
+// 			total += int(val.(float64))
+// 		}
+// 	}
+// }
+
+// fmt.Println(total)
+//
+// ------------------------------------------
+//
+// type GlobalId []struct {
+// 	GlobalId int64 `json:"global_id"`
+//  }
+
+//  func main() {
+// 	var cnt int64
+// 	jsonFile, err := os.Open("data-20190514T0100.json")
+// 	if err != nil {
+// 	   fmt.Println(err)
+// 	}
+// 	var Ok GlobalId
+
+// 	byteValue, _ := io.ReadAll(jsonFile)
+
+// 	if err := json.Unmarshal(byteValue, &Ok); err != nil {
+// 	   fmt.Println(err)
+// 	}
+
+// 	for _, elem := range Ok {
+// 	   cnt += elem.GlobalId
+// 	}
+// 	fmt.Println(cnt)
+//  }
