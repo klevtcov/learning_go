@@ -1,6 +1,9 @@
 package m3_8
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 func task(c chan int, N int) {
 	c <- N + 1
@@ -25,12 +28,28 @@ func removeDuplicates(inputStream chan string, outputStream chan string) {
 
 func main() {
 
-	// done := make(chan struct{})
-	// go myFunc(done)
-	// <-done
 	fmt.Println("2")
 }
 
+// Внутри функции main (функцию объявлять не нужно), вам необходимо в отдельных горутинах вызвать
+// функцию work() 10 раз и дождаться результатов выполнения вызванных функций.
+// Функция work() ничего не принимает и не возвращает. Пакет "sync" уже импортирован.
+//
+// 3.9.5
+//
+// wg := new(sync.WaitGroup)
+// for i := 0; 1 < 10; i++ {
+// 	wg.Add(1)
+// 	go func() {
+// 		defer wg.Done()
+// 		work()
+// 	}()
+// }
+
+// wg.Wait()
+//
+//
+//
 // Внутри функции main (функцию объявлять не нужно), вам необходимо в отдельной горутине вызвать функцию work() и дождаться результатов ее выполнения.
 
 // Функция work() ничего не принимает и не возвращает.
