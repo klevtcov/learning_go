@@ -2,7 +2,7 @@ package m3_8
 
 import (
 	"fmt"
-	"sync"
+	// "sync"
 )
 
 func task(c chan int, N int) {
