@@ -38,7 +38,7 @@ func main() {
 // 3.9.5
 //
 // wg := new(sync.WaitGroup)
-// for i := 0; 1 < 10; i++ {
+// for i := 0; i < 10; i++ {
 // 	wg.Add(1)
 // 	go func() {
 // 		defer wg.Done()
