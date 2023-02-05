@@ -5,7 +5,7 @@
 
 * 01 https://habr.com/ru/post/412715/ - Изучаем многопоточное программирование в Go по картинкам
 * 02 https://habr.com/ru/post/490336/ - Анатомия каналов в Go
-* https://medium.com/nuances-of-programming/конкурентность-и-параллелизм-в-golang-go-процедуры-82bae0f92e81 - Конкурентность и параллелизм в Golang. Горутины.
+* 03 https://medium.com/nuances-of-programming/конкурентность-и-параллелизм-в-golang-go-процедуры-82bae0f92e81 - Конкурентность и параллелизм в Golang. Горутины.
 
 
 
