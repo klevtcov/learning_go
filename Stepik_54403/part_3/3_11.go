@@ -73,3 +73,40 @@ func main() {
 // Формат вывода:
 
 // канал для вывода результатов передается через аргумент out.
+//
+//
+//  Решение со структурой и методом в ней
+//
+// type Worker struct {
+// 	sync.Mutex
+// 	sync.WaitGroup
+// }
+
+// func (w *Worker) Do(work func(int) int, x int, res *int) {
+// 	w.Add(1)
+// 	go func() {
+// 		y := work(x)
+// 		w.Lock()
+// 		*res += y
+// 		w.Unlock()
+// 		w.Done()
+// 	}()
+// }
+
+// func merge2Channels(fn func(int) int, in1 <-chan int, in2 <-chan int, out chan<- int, n int) {
+// 	go func() {
+// 		result := make([]int, n)
+// 		var w Worker
+// 		for i := range result {
+// 			w.Do(fn, <-in1, &result[i])
+// 			w.Do(fn, <-in2, &result[i])
+// 		}
+// 		w.Wait()
+// 		for i := range result {
+// 			out <- result[i]
+// 		}
+// 	}()
+// }
+//
+//
+//
