@@ -1,4 +1,4 @@
-package main
+package m3_9
 
 import (
 	"fmt"
