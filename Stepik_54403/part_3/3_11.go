@@ -15,25 +15,12 @@ func merge2Channels(fn func(int) int, in1 <-chan int, in2 <-chan int, out chan<-
 	go func() {
 		defer close(out)
 
-		wg.Add(2)
-
-		go func() {
-			for i := 0; i < n; i++ {
-				x := <-in1
-				chan1[i] = x
-			}
-			wg.Done()
-		}()
-
-		go func() {
-			for a := 0; a < n; a++ {
-				y := <-in2
-				chan1[a] = y
-			}
-			wg.Done()
-		}()
-
-		wg.Wait()
+		for i := 0; i < n; i++ {
+			x := <-in1
+			y := <-in2
+			chan1[i] = x
+			chan2[i] = y
+		}
 
 		wg.Add(n * 2)
 
