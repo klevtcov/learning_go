@@ -5,32 +5,21 @@ import (
 )
 
 func calculator(firstChan <-chan int, secondChan <-chan int, stopChan <-chan struct{}) <-chan int {
-	output := make(<-chan int) 
+	output := make(chan int)
 
 	go func() {
 		defer close(output)
 
 		select {
-		case <-firstChan:
-			a := <-firstChan
-		case <-tick2:
-			fmt.Println("Получено значение из второго канала")
+		case x := <-firstChan:
+			output <- x * x
+		case x := <-secondChan:
+			output <- x * 3
+		case <-stopChan:
+			return
 		}
-	}
-}
-
-
-
-tick1 := time.After(time.Second)
-tick2 := time.After(time.Second * 2)
-select {
-case <-tick1:
-	fmt.Println("Получено значение из первого канала")
-case <-tick2:
-	fmt.Println("Получено значение из второго канала")
-// Блок default выполнится раньше блока case - 1 секунда слишком много для Go
-default:
-	fmt.Println("Действие по умолчанию")
+	}()
+	return output
 }
 
 func main() {
