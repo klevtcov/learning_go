@@ -38,3 +38,5 @@
 * https://habr.com/ru/post/271789/    Танцы с мьютексами в Go
 
 * https://kovardin.ru/articles/go/zamykaniya/ - Замыкания
+
+* https://go.dev/blog/slices-intro - Срезы
