@@ -1,5 +1,8 @@
 ## Прочитанные статьи
 
+### Массивы, Слайсы
+
+* 05 Нарезаем массивы правильно в Go - https://habr.com/ru/post/597521/
 
 ### Многопоточность в GO
 
@@ -33,3 +36,5 @@
 * https://habr.com/ru/post/489862/  Как работает планировщик Go
 * https://habr.com/ru/post/502506/    GO Scheduler: теперь не кооперативный?
 * https://habr.com/ru/post/271789/    Танцы с мьютексами в Go
+
+* https://kovardin.ru/articles/go/zamykaniya/ - Замыкания
