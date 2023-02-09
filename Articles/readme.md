@@ -3,6 +3,7 @@
 ### Массивы, Слайсы
 
 * 05 Нарезаем массивы правильно в Go - https://habr.com/ru/post/597521/
+* 06 Go Slices: usage and internals - https://go.dev/blog/slices-intro
 
 ### Многопоточность в GO
 
@@ -39,4 +40,4 @@
 
 * https://kovardin.ru/articles/go/zamykaniya/ - Замыкания
 
-* https://go.dev/blog/slices-intro - Срезы
+
