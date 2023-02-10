@@ -5,6 +5,13 @@
 * 05 Нарезаем массивы правильно в Go - https://habr.com/ru/post/597521/
 * 06 Go Slices: usage and internals - https://go.dev/blog/slices-intro
 
+
+### Интерфейсы
+
+* 07 Интерфейсы в Golang - https://golangify.com/interface
+
+
+
 ### Многопоточность в GO
 
 * 01 Изучаем многопоточное программирование в Go по картинкам - https://habr.com/ru/post/412715/
