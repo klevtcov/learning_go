@@ -9,6 +9,7 @@
 ### Интерфейсы
 
 * 07 Интерфейсы в Golang - https://golangify.com/interface
+* 08 Разбираемся с интерфейсами в Go - https://habr.com/ru/company/vk/blog/463063/
 
 
 
