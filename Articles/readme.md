@@ -10,7 +10,7 @@
 
 * 07 Интерфейсы в Golang - https://golangify.com/interface
 * 08 Разбираемся с интерфейсами в Go - https://habr.com/ru/company/vk/blog/463063/
-
+* 09 Определение методов в Go - https://www.digitalocean.com/community/tutorials/defining-methods-in-go-ru
 
 
 ### Многопоточность в GO
