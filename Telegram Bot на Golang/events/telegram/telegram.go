@@ -78,7 +78,7 @@ func (p *Processor) processMessage(event events.Event) error {
 
 	}
 
-	// в зависимости от типа сообщения, гнам надо выполнить разные действия
+	// в зависимости от типа сообщения, нам надо выполнить разные действия
 	if err := p.doCmd(event.Text, meta.ChatID, meta.Username); err != nil {
 		return e.Wrap("can't process message: ", err)
 	}

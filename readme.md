@@ -23,6 +23,15 @@
 * JSON
 
 
+## Docker - Docker для начинающих + практический опыт
+* Начальный уровень владения Docker
+* Основные команды Docker с практическими упражнениями
+* Создание образов с помощью Dockerfiles в практических упражнениях
+* Понятие Docker Compose
+* Создание стека приложений используя Docker Compose в практических упражнениях
+* Понятие Docker Swarm
+
+
 ## Be Geek - изучаем go программирование на golang
 * https://www.youtube.com/playlist?list=PLQuaNOtBP3TpjiROGjy3-hEr5xL0fN9bX
 
