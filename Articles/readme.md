@@ -54,6 +54,5 @@
 * https://habr.com/ru/post/502506/    GO Scheduler: теперь не кооперативный?
 * https://habr.com/ru/post/271789/    Танцы с мьютексами в Go
 
-* https://kovardin.ru/articles/go/zamykaniya/ – Замыкания
-
-
+* О замыканиях в блоге Mozilla. - https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
+* Дискуссия о замыканиях на stackoverflow. - http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1
