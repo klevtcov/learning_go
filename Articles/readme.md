@@ -29,6 +29,7 @@
 ### Общее о языке
 
 * 04 Является ли Go языком ООП? – https://habr.com/ru/post/225907/
+* 12 Замыкания – https://kovardin.ru/articles/go/zamykaniya/
 
 
 
