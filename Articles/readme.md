@@ -26,10 +26,11 @@
 * 11 Что такое фаззинг и зачем он нужен? – https://habr.com/ru/company/ozontech/blog/711428/
 
 
-### Общее о языке
+### Общее о языке и технологиях
 
 * 04 Является ли Go языком ООП? – https://habr.com/ru/post/225907/
 * 12 Замыкания – https://kovardin.ru/articles/go/zamykaniya/
+* 13 Модель OSI | 7 уровней – https://www.youtube.com/watch?v=je0QFU7p5Oo
 
 
 
