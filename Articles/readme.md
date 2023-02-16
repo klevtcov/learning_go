@@ -58,3 +58,6 @@
 
 * О замыканиях в блоге Mozilla. - https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
 * Дискуссия о замыканиях на stackoverflow. - http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1
+
+
+* https://yourbasic.org/golang/for-loop/ - примеры паттернов циклов в Gо.

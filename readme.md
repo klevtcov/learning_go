@@ -37,6 +37,10 @@
 * https://www.youtube.com/playlist?list=PLQuaNOtBP3TpjiROGjy3-hEr5xL0fN9bX
 
 
+## Яндекс - Основы Go
+* https://practicum.yandex.ru/profile/go-basics
+
+
 ## Telegram Bot на Golang
 * https://www.youtube.com/playlist?list=PLFAQFisfyqlWDwouVTUztKX2wUjYQ4T3l
 * Приложение на Go для сохранения ссылок
