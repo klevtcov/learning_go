@@ -24,6 +24,7 @@
 ### Тестирование
 
 * 11 Что такое фаззинг и зачем он нужен? – https://habr.com/ru/company/ozontech/blog/711428/
+* 14 Обработка паник в Go – https://www.digitalocean.com/community/tutorials/handling-panics-in-go-ru
 
 
 ### Общее о языке и технологиях
