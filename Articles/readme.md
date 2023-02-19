@@ -61,3 +61,5 @@
 
 
 * https://yourbasic.org/golang/for-loop/ - примеры паттернов циклов в Gо.
+* The Go Programming Language Specification. Integer literals - https://golang.org/ref/spec#Integer_literals
+* Gopher Guides. Where and When to use Iota in Go - https://www.gopherguides.com/articles/how-to-use-iota-in-golang
