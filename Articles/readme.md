@@ -63,3 +63,7 @@
 * https://yourbasic.org/golang/for-loop/ - примеры паттернов циклов в Gо.
 * The Go Programming Language Specification. Integer literals - https://golang.org/ref/spec#Integer_literals
 * Gopher Guides. Where and When to use Iota in Go - https://www.gopherguides.com/articles/how-to-use-iota-in-golang
+
+* Подробная статья о том, как Go работает с памятью - https://medium.com/eureka-engineering/understanding-allocations-in-go-stack-heap-memory-9a2631b5035d
+* How large should a struct be before you should pass by reference for performance? - https://www.reddit.com/r/golang/comments/rcnyhr/how_large_should_a_struct_be_before_you_should/
+* Наглядное разъяснение указателей - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
