@@ -1,4 +1,4 @@
-package main
+package ma002
 
 import "fmt"
 
