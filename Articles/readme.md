@@ -67,3 +67,6 @@
 * Подробная статья о том, как Go работает с памятью - https://medium.com/eureka-engineering/understanding-allocations-in-go-stack-heap-memory-9a2631b5035d
 * How large should a struct be before you should pass by reference for performance? - https://www.reddit.com/r/golang/comments/rcnyhr/how_large_should_a_struct_be_before_you_should/
 * Наглядное разъяснение указателей - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
+* Go Slice Tricks Cheat Sheet - https://ueokande.github.io/go-slice-tricks/
+* Digital Ocean. Массивы и срезы в Go - https://www.digitalocean.com/community/tutorials/understanding-arrays-and-slices-in-go-ru
+
