@@ -4,6 +4,7 @@
 
 * 05 Нарезаем массивы правильно в Go – https://habr.com/ru/post/597521/
 * 06 Go Slices: usage and internals – https://go.dev/blog/slices-intro
+* 15 Digital Ocean. Массивы и срезы в Go – https://www.digitalocean.com/community/tutorials/understanding-arrays-and-slices-in-go-ru
 
 
 ### Интерфейсы
