@@ -71,3 +71,6 @@
 * Go Slice Tricks Cheat Sheet - https://ueokande.github.io/go-slice-tricks/
 * Digital Ocean. Массивы и срезы в Go - https://www.digitalocean.com/community/tutorials/understanding-arrays-and-slices-in-go-ru
 
+* Style guideline for Go packages – https://rakyll.org/style-packages/
+* Practical Go: Real world advice for writing maintainable Go programs – https://dave.cheney.net/practical-go/presentations/qcon-china.html
+* Standard Go Project Layout – https://github.com/golang-standards/project-layout/blob/master/README_ru.md
