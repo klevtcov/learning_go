@@ -1,5 +1,6 @@
 ## Основы Go
 
+* https://practicum.yandex.ru/go-basics/
 
 ### Спринт 1 – История и идеология Go
 
