@@ -61,7 +61,7 @@
 * О замыканиях в блоге Mozilla. - https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
 * Дискуссия о замыканиях на stackoverflow. - http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1
 
-
+* https://yourbasic.org/golang/for-loop-range-array-slice-map-channel/ - 4 basic range loop patterns
 
 * The Go Programming Language Specification. Integer literals - https://golang.org/ref/spec#Integer_literals
 * Gopher Guides. Where and When to use Iota in Go - https://www.gopherguides.com/articles/how-to-use-iota-in-golang
