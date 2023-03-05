@@ -62,7 +62,8 @@
 * О замыканиях в блоге Mozilla. - https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
 * Дискуссия о замыканиях на stackoverflow. - http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1
 
-
+* Unexpected values in range loop - https://yourbasic.org/golang/gotcha-unexpected-values-range/
+* Can’t change entries in range loop - https://yourbasic.org/golang/gotcha-change-value-range/
 
 * The Go Programming Language Specification. Integer literals - https://golang.org/ref/spec#Integer_literals
 * Gopher Guides. Where and When to use Iota in Go - https://www.gopherguides.com/articles/how-to-use-iota-in-golang
