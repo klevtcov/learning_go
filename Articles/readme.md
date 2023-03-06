@@ -64,6 +64,10 @@
 * https://habr.com/ru/post/502506/    GO Scheduler: теперь не кооперативный?
 * https://habr.com/ru/post/271789/    Танцы с мьютексами в Go
 
+
+* GoMock vs. Testify: Mocking frameworks for Go - https://blog.codecentric.de/2019/07/gomock-vs-testify/
+* Mock Solutions for Golang Unit Test - https://laiyuanyuan-sg.medium.com/mock-solutions-for-golang-unit-test-a2b60bd3e157
+
 * О замыканиях в блоге Mozilla. - https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
 * Дискуссия о замыканиях на stackoverflow. - http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1
 
