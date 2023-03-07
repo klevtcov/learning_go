@@ -2,18 +2,32 @@ package main
 
 import "fmt"
 
+// func twoSum(nums []int, target int) []int {
+// 	for i, v := range nums {
+// 		for j, v2 := range nums {
+// 			if i == j {
+// 				continue
+// 			}
+// 			if v+v2 == target {
+// 				return []int{i, j}
+// 			}
+// 		}
+// 	}
+// 	return nil
+// }
+
 func twoSum(nums []int, target int) []int {
-	for i, v := range nums {
-		for j, v2 := range nums {
-			if i == j {
-				continue
-			}
-			if v+v2 == target {
-				return []int{i, j}
-			}
+	// Space: O(n)
+	s := make(map[int]int)
+	// Time: O(n)
+	for idx, num := range nums {
+		// Time: O(1)
+		if pos, ok := s[target-num]; ok {
+			return []int{pos, idx}
 		}
+		s[num] = idx
 	}
-	return nil
+	return []int{}
 }
 
 func main() {
@@ -63,7 +77,7 @@ func main() {
 //
 //
 //
-// Вариант через Хеш-таблицу, но непонятно, в какой момент она создаётся
+
 // Time: O(n)
 // Space: O(n)
 // func twoSum(nums []int, target int) []int {
