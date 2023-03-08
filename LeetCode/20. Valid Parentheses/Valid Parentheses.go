@@ -95,3 +95,34 @@ func main() {
 //     }
 //     return len(stack) == 0
 // }
+//
+//
+//
+// func isValid(s string) bool {
+//     if len(s)%2 != 0 {
+//         return false
+//     }
+
+//     stack := make([]rune,0,len(s))
+//     hashMap := map[rune]rune {
+//         '}' : '{',
+//         ')' : '(',
+//         ']' : '[',
+//     }
+//     for _, char := range s {
+//         if _, ok := hashMap[char]; !ok {
+//             // this bracket is open
+//             stack = append(stack, char)
+//         } else {
+//             // this bracket is close
+//             if len(stack) == 0 || (stack[len(stack)-1] != hashMap[char]) {
+//                 return false
+//             }
+//             stack = stack[:len(stack)-1]
+//         }
+//     }
+//     if len(stack) != 0 {
+//         return false
+//     }
+//     return true
+// }
