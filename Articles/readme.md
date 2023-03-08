@@ -22,7 +22,7 @@
 * 03 Конкурентность и параллелизм в Golang. Горутины. – https://medium.com/nuances-of-programming/конкурентность-и-параллелизм-в-golang-go-процедуры-82bae0f92e81
 
 
-### Тестирование
+### Тестирование и обработка ошибок
 
 * 11 Что такое фаззинг и зачем он нужен? – https://habr.com/ru/company/ozontech/blog/711428/
 * 14 Обработка паник в Go – https://www.digitalocean.com/community/tutorials/handling-panics-in-go-ru
