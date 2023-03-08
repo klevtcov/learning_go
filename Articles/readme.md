@@ -86,3 +86,9 @@
 * Style guideline for Go packages – https://rakyll.org/style-packages/
 * Practical Go: Real world advice for writing maintainable Go programs – https://dave.cheney.net/practical-go/presentations/qcon-china.html
 * Standard Go Project Layout – https://github.com/golang-standards/project-layout/blob/master/README_ru.md
+
+### Курсы
+
+* Курсы от Rebrain - https://rebrainme.com/
+* Уроки по Golang - https://golangify.com/
+* Курсы go101 - https://go101.org/
