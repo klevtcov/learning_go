@@ -2,51 +2,58 @@ package main
 
 import "fmt"
 
-// func isValid(s string) bool {
-// 	dict := map[string]int{
-// 		"(": 0,
-// 		")": 0,
-// 		"[": 0,
-// 		"]": 0,
-// 		"{": 0,
-// 		"}": 0,
-// 	}
-// 	for _, val := range s {
-// 		dict[string(val)] += 1
-// 	}
-
-// 	if dict["("] == dict[")"] && dict["["] == dict["]"] && dict["{"] == dict["}"] {
-// 		return true
-// 	}
-// 	return false
-// }
-
 func isValid(s string) bool {
-	for i := 0; i < len(s); i = i + 2 {
-		switch string(s[i]) {
-		case "(":
-			if string(s[i+1]) != ")" {
+	result := make([]string, 0, len(s))
+	if len(s)%2 == 1 {
+		return false
+	}
+
+	for _, val := range s {
+		switch string(val) {
+		case "(", "[", "{":
+			result = append(result, string(val))
+		case ")":
+			if len(result) < 1 {
 				return false
 			}
-		case "[":
-			if string(s[i+1]) != "]" {
+			if result[len(result)-1] != "(" {
+				return false
+			} else {
+				result = result[:len(result)-1]
+			}
+		case "]":
+			if len(result) < 1 {
 				return false
 			}
-		case "{":
-			if string(s[i+1]) != "}" {
+			if result[len(result)-1] != "[" {
 				return false
+			} else {
+				result = result[:len(result)-1]
+			}
+		case "}":
+			if len(result) < 1 {
+				return false
+			}
+			if result[len(result)-1] != "{" {
+				return false
+			} else {
+				result = result[:len(result)-1]
 			}
 		}
 	}
-	return true
+
+	return len(result) <= 0
 }
 
 func main() {
 	fmt.Println(isValid("()"))
 	fmt.Println(isValid("()[]{}"))
-	fmt.Println(isValid("()[]{}["))
+	fmt.Println(isValid("([])[{}]{}"))
 	fmt.Println(isValid("(]"))
 	fmt.Println(isValid("([)]")) // false
+	fmt.Println(isValid("()[]{}["))
+	fmt.Println(isValid("})[]{}"))
+	fmt.Println(isValid("(){}}{"))
 }
 
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -65,3 +72,26 @@ func main() {
 
 // Input: s = "(]"
 // Output: false
+
+// func isValid(s string) bool {
+//     stack := []byte{}
+
+//     for i := 0; i < len(s); i++ {
+//         if s[i] == '(' || s[i] == '[' || s[i] == '{' {
+//             stack = append(stack, s[i])
+//         } else if len(stack) == 0 {
+//             return false
+//         } else {
+//             prev := stack[len(stack)-1]
+//             stack = stack[:len(stack)-1]
+//             if s[i] == ')' && prev != '(' {
+//                 return false
+//             } else if s[i] == ']' && prev != '[' {
+//                 return false
+//             } else if s[i] == '}' && prev != '{' {
+//                 return false
+//             }
+//         }
+//     }
+//     return len(stack) == 0
+// }
