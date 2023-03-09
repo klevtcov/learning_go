@@ -35,6 +35,7 @@
 * 13 Модель OSI | 7 уровней – https://www.youtube.com/watch?v=je0QFU7p5Oo
 * 16 Примеры паттернов циклов в Gо – https://yourbasic.org/golang/for-loop/
 * 17 4 basic range loop patterns – https://yourbasic.org/golang/for-loop-range-array-slice-map-channel/
+* 18 Почему ранний возврат из функций так важен? - https://habr.com/ru/post/348074/
 
 
 
@@ -52,8 +53,7 @@
 * https://medium.com/@victor_nerd/под-капотом-golang-как-работают-каналы-часть-1-e1da9e3e104d – Под капотом Golang — как работают каналы. Часть 1.
 * https://medium.com/@victor_nerd/golang-channel-internal-part2-b4e37ad9a118 – Строение каналов в Golang. Часть 2.
 
-* Хабр. Почему ранний возврат из функций так важен? - https://habr.com/ru/post/348074/
-* Бесит, что err != nil: главные инсайты из опроса Go-разработчиков - https://habr.com/ru/article/713190/
+
 
 * https://nuancesprog.ru/p/5713/ – Обработка ошибок в Golang с помощью Panic, Defer и Recover
 * https://nuancesprog.ru/p/5583/ – Примитивы синхронизации в Go
