@@ -65,6 +65,12 @@
 * https://habr.com/ru/post/271789/    Танцы с мьютексами в Go
 
 
+* https://habr.com/ru/post/269589/ - Чистая архитектура
+* https://habr.com/ru/post/269893/ - Чистая архитектура в Go-приложении. Часть 1
+* https://habr.com/ru/post/270351/ - Чистая архитектура в Go-приложении. Часть 2
+* https://habr.com/ru/post/271157/ - Чистая архитектура в Go-приложении. Часть 3
+
+
 * GoMock vs. Testify: Mocking frameworks for Go - https://blog.codecentric.de/2019/07/gomock-vs-testify/
 * Mock Solutions for Golang Unit Test - https://laiyuanyuan-sg.medium.com/mock-solutions-for-golang-unit-test-a2b60bd3e157
 
