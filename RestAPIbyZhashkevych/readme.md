@@ -13,3 +13,6 @@ https://www.youtube.com/watch?v=1LFbmWk7NLQ&list=PLbTTxxr-hMmyFAvyn7DeOgNRN8BQdj
 - Написание SQL запросов.
 - Graceful Shutdown
 
+https://github.com/gin-gonic/gin
+https://github.com/spf13/viper
+
