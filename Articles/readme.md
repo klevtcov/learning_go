@@ -71,6 +71,8 @@
 * https://habr.com/ru/post/271157/ - Чистая архитектура в Go-приложении. Часть 3
 
 
+* https://habr.com/ru/post/66931/ - 8 полезных регэкспов с наглядным разбором
+
 * GoMock vs. Testify: Mocking frameworks for Go - https://blog.codecentric.de/2019/07/gomock-vs-testify/
 * Mock Solutions for Golang Unit Test - https://laiyuanyuan-sg.medium.com/mock-solutions-for-golang-unit-test-a2b60bd3e157
 
