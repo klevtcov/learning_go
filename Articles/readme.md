@@ -37,6 +37,7 @@
 * 17 4 basic range loop patterns – https://yourbasic.org/golang/for-loop-range-array-slice-map-channel/
 * 18 Почему ранний возврат из функций так важен? - https://habr.com/ru/post/348074/
 * 19 https://habr.com/ru/post/269589/ - Чистая архитектура
+* 20 https://habr.com/ru/post/269893/ - Чистая архитектура в Go-приложении. Часть 1
 
 
 
@@ -71,7 +72,7 @@
 
 
 
-* https://habr.com/ru/post/269893/ - Чистая архитектура в Go-приложении. Часть 1
+
 * https://habr.com/ru/post/270351/ - Чистая архитектура в Go-приложении. Часть 2
 * https://habr.com/ru/post/271157/ - Чистая архитектура в Go-приложении. Часть 3
 
