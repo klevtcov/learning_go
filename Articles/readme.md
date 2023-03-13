@@ -73,12 +73,6 @@
 * https://habr.com/ru/users/dikkini/posts/ - все посты про разработку системы заметок
 
 
-
-
-
-
-
-
 * https://habr.com/ru/post/66931/ - 8 полезных регэкспов с наглядным разбором
 
 * GoMock vs. Testify: Mocking frameworks for Go - https://blog.codecentric.de/2019/07/gomock-vs-testify/
